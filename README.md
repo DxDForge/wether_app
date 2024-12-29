@@ -2,129 +2,111 @@
 
 A modern Flutter weather application that provides real-time weather information and forecasts using the OpenWeatherMap API.
 
-## Features 🌟
+## Download ⬇️
 
-- **Real-time Weather Data**
-  - 🌡️ Current temperature
-  - 💧 Humidity levels
-  - 🌪️ Wind speed
-  - 🎯 Precise weather descriptions
-  - 🖼️ Weather condition icons
+[Download Latest APK](https://github.com/DxDForge/wether_app/releases/latest)
 
-- **Location Services**
-  - 📍 Automatic current location detection
-  - 🔍 Search weather by city name
-  - 🌍 Worldwide coverage
+## Setup Instructions 🛠️
 
-- **Advanced Features**
-  - 📊 7-day weather forecast
-  - 💾 Offline mode with data caching
-  - 🔄 Pull-to-refresh updates
-  - ⚡ Fast and responsive UI
+### Prerequisites
+- Flutter SDK (>=3.0.0)
+- OpenWeatherMap API key
+- Android Studio / VS Code
+- Git
 
-## Screenshots 📱
+### Step 1: Clone the Repository
+```bash
+git clone https://github.com/DxDForge/wether_app.git
+cd wether_app
+```
 
-<p float="left">
-  <img src="assets/screenshots/home_screen.png" width="200" alt="Home Screen"/>
+### Step 2: API Key Setup
+1. Sign up at [OpenWeatherMap](https://openweathermap.org/api)
+2. Get your API key from the account dashboard
+3. Create a `.env` file in the project root
+4. Add your API key:
+```
+OPENWEATHER_API_KEY=your_api_key_here
+```
 
-</p>
+### Step 3: Install Dependencies
+```bash
+flutter pub get
+```
 
-## Installation 🚀
+### Step 4: Run the App
+```bash
+flutter run
+```
 
-1. **Clone the repository**
-- git clone https://github.com/DxDForge/wether_app.git
+## Building from Source 🔨
 
-2. **Set up environment variables**
-   - Create a `.env` file in the project root
-   - Add your OpenWeatherMap API key:
+### Debug Build
+```bash
+flutter build apk --debug
+```
 
-3. **Install dependencies**
-
-4. **Run the app**
-
-## Tech Stack 💻
-
-- **Framework**: Flutter
-- **API**: OpenWeatherMap
-- **Local Storage**: SharedPreferences
-- **Location Services**: Geolocator
-- **HTTP Client**: http package
-- **Environment**: flutter_dotenv
-- **Date Formatting**: intl
-
-## Project Structure 📁
-
-## Features in Detail 📋
-
-- **Current Weather**
-  - Real-time temperature display
-  - Humidity and wind information
-  - Weather condition description
-  - Visual weather indicators
-
-- **Weather Forecast**
-  - 7-day weather prediction
-  - Daily temperature ranges
-  - Weather condition forecasts
-  - Easy-to-read format
-
-- **Location Features**
-  - Automatic location detection
-  - City search functionality
-  - Location permission handling
-
-- **Offline Capabilities**
-  - Local data caching
-  - Offline mode support
-  - Automatic data refresh
-
-## Contributing 🤝
-
-Contributions are welcome! Please feel free to submit a Pull Request. For major changes, please open an issue first to discuss what you would like to change.
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-## Building 🔨
-
-To build the release version:
-
+### Release Build
 ```bash
 flutter build apk --release
 ```
 
-The APK file will be available at: `build/app/outputs/flutter-apk/app-release.apk`
+## Known Limitations ⚠️
 
-## Known Issues 🐛
+1. API Limitations
+   - Weather forecast limited to 5 days (OpenWeatherMap free tier)
+   - Limited API calls per minute
+   - City search requires exact name matches
 
-- Weather forecast limited to 5 days (OpenWeatherMap API free tier limitation)
-- City search requires exact name matches
-- Weather icons may take time to load on slow connections
+2. Technical Limitations
+   - Requires location permissions
+   - Internet connection needed for first load
+   - Weather icons require internet connection
 
-## Future Improvements 🚀
+3. Device Requirements
+   - Android 5.0 (API level 21) or higher
+   - Location services enabled
+   - Internet connection for updates
 
-- [ ] Dark mode support
-- [ ] Multiple location saving
-- [ ] Weather notifications
-- [ ] More detailed weather information
-- [ ] Weather maps integration
-- [ ] Unit tests implementation
+## Testing 🧪
+
+Run the tests:
+```bash
+flutter test
+```
+
+## Project Structure 📁
+
+```
+lib/
+├── models/
+│   └── weather_model.dart      # Data models
+├── screens/
+│   └── home_screen.dart        # Main screen
+├── services/
+│   ├── weather_service.dart    # API handling
+│   └── cache_service.dart      # Local storage
+├── widgets/
+│   ├── current_weather_widget.dart
+│   └── forecast_widget.dart
+└── main.dart                   # Entry point
+```
+
+## Features Implemented ✅
+
+- [x] Current weather display
+- [x] 7-day forecast
+- [x] Location-based weather
+- [x] City search
+- [x] Offline support
+- [x] Error handling
+- [x] Data caching
+- [x] Pull-to-refresh
+
+## Contact & Support 📧
+
+For support, email [your-email] or open an issue in the repository.
 
 ## License 📄
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Acknowledgments 🙏
-
-- OpenWeatherMap for providing the weather data API
-- Flutter team for the amazing framework
-- All contributors who help improve this project
-
-## Contact 📧
-
-DxDForge - [GitHub](https://github.com/DxDForge)
-
-Project Link: [https://github.com/DxDForge/wether_app](https://github.com/DxDForge/wether_app)
+<!-- This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details. -->
