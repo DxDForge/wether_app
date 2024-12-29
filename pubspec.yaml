@@ -27,6 +27,7 @@ dev_dependencies:
 flutter:
   assets:
     - .env
+    - assets/screenshots/
 
 flutter_icons:
   android: "launcher_icon"
